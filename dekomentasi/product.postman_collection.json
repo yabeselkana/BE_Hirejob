@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "d8f38340-0f37-4b64-a9b2-df9830b97324",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26301439",
+		"_collection_link": "https://speeding-resonance-16366.postman.co/workspace/a9f08c6f-aed1-4523-a312-d17d5e35ffe1/collection/26301439-d8f38340-0f37-4b64-a9b2-df9830b97324?action=share&creator=26301439&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/products/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "bil",
+							"disabled": true
+						},
+						{
+							"key": "input",
+							"value": "name",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "     {\r\n            \"name\": \"Baju Baru\",\r\n            \"price\": 40000,\r\n            \"stock\": 4,\r\n            \"image\": \"foto.jpg\",\r\n            \"rating\": \"B\",\r\n            \"merek\": \"BigBang\",\r\n            \"id_catagory\": 3\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n            \"name\": \"Sepatu Bata\",\r\n            \"price\": 990000,\r\n            \"stock\": 2,\r\n            \"image\": \"foto.jpg\",\r\n            \"rating\": \"C\",\r\n            \"merek\": \"Batako\",\r\n            \"id_catagory\": 3\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host1}}products?sortby=name&sort=asc&page=1&limit=2",
+					"host": [
+						"{{Host1}}products"
+					],
+					"query": [
+						{
+							"key": "sortby",
+							"value": "name"
+						},
+						{
+							"key": "sort",
+							"value": "asc"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

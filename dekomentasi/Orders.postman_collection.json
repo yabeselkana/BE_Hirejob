@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "65a21b98-68eb-45a4-84fc-24581b521694",
+		"name": "Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26301439",
+		"_collection_link": "https://speeding-resonance-16366.postman.co/workspace/a9f08c6f-aed1-4523-a312-d17d5e35ffe1/collection/26301439-65a21b98-68eb-45a4-84fc-24581b521694?action=share&creator=26301439&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"date\": \"2023-06-15T17:00:00.000Z\",\r\n            \"address\": \"Jl.Bunga Kamboja no:2\",\r\n            \"qty\": 8,\r\n            \"shiping\": \"Jne\",\r\n            \"total_price\": 9000000,\r\n            \"id_product\": 2,\r\n            \"id_user\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/orders/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Host1}}orders/3",
+					"host": [
+						"{{Host1}}orders"
+					],
+					"path": [
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
