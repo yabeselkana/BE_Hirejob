@@ -108,4 +108,6 @@ API endpoint list are also available as published postman documentation
 
 :rocket: [`Demo Hiring App`](https://hire-job-fe-lyart.vercel.app/)
 
-Project link : [https://github.com/izaazwaskito/HireJob-BE](https://github.com/izaazwaskito/HireJob-BE))
+:rocket: [`Demo BE Hiring App`](https://hire-job-fe-lyart.vercel.app/)
+
+<!-- Project link : [https://github.com/izaazwaskito/HireJob-BE](https://github.com/izaazwaskito/HireJob-BE) -->
