@@ -4,6 +4,7 @@ const usersController = require("../controller/users");
 const { protect } = require("../middlewares/auth");
 router
   .post("/registerWork", usersController.registerWork)
+  .get("/verify", usersController.VerifyAccount)
   .post("/registerRekrut", usersController.registerRekrut)
   .post("/login", usersController.login)
   .get("/profile", protect, usersController.profile)

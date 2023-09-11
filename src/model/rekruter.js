@@ -29,7 +29,7 @@ const update = (data) => {
 
 const updatePhoto = (data) => {
   const { id, photo } = data;
-  return Pool.query(`UPDATE rekrut SET photo='${photo}'  WHERE id='${id}'`);
+  return Pool.query(`UPDATE rekrut SET photo = '${photo}'  WHERE id='${id}'`);
 };
 
 const deleteData = (id) => {

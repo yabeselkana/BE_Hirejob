@@ -1,5 +1,6 @@
 const createError = require("http-errors");
-const { selectAll, selectSearchWork, selectusers, select, countData, findId, insert, update, deleteData } = require("../model/worker");
+
+const { selectAll, selectSearchWork, selectusers, select, countData, findId, insert, update, updatePhoto, deleteData } = require("../model/worker");
 const commonHelper = require("../helper/common");
 const cloudinary = require("../middlewares/cloudinary");
 
@@ -208,6 +209,36 @@ let workController = {
       console.log(error);
     }
   },
+  updateRekrutPhoto: async (req, res, next) => {
+    try {
+      // const role = req.payload.role;
+      // //  console.log(role)
+      // if (role !== "reseller") {
+      //   return next(createError(403, `${role} Not Update Data`));
+      // }
+      const PORT = process.env.PORT || 4000;
+      const DB_HOST = process.env.DB_HOST || "localhost";
+      const id = Number(req.params.id);
+      const result = await cloudinary.uploader.upload(req.file.path);
+      const photo = result.secure_url;
+      const cloudinary_id = result.public_id;
+      const { rowCount } = await findId(id);
+      if (!rowCount) {
+        return next(createError(403, "ID is Not Found"));
+      }
+      const data = {
+        id,
+        photo,
+      };
+      console.log(data);
+      updatePhoto(data)
+        .then((result) => commonHelper.response(res, data, 200, "Worker updated", {}))
+        .catch((err) => res.send(err));
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
   deleteWork: async (req, res, next) => {
     try {
       // const role = req.payload.role;

@@ -9,7 +9,7 @@ router
   .get("/id_users/", rekrutController.getIdUsers)
   .get("/search/", rekrutController.getSearchRekrut)
   .get("/:id", rekrutController.getDetailRekrut)
-  .put("/photo/:id", rekrutController.updateRekrutPhoto)
+  .put("/photo/:id", upload, rekrutController.updateRekrutPhoto)
   .post("/", upload, rekrutController.createRekrut)
   .put("/:id", upload, rekrutController.updateRekrut)
   .delete("/:id", rekrutController.deleteRekrut);

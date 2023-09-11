@@ -13,6 +13,7 @@ router
   .get("/:id", workController.getDetailWork)
   .post("/", upload, workController.createWork)
   .put("/:id", upload, workController.updateWork)
+  .put("/photo/:id", upload, workController.updateRekrutPhoto)
   .delete("/:id", workController.deleteWork);
 
 module.exports = router;

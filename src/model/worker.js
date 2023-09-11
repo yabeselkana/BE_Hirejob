@@ -4,7 +4,7 @@ const selectAll = ({ limit, offset, sort, sortby, keyword }) => {
 };
 
 const selectusers = ({ iduser }) => {
-  return Pool.query(`SELECT * FROM worker where id_users = '${iduser}'   `);
+  return Pool.query(`SELECT users.* ,  worker.* FROM worker LEFT JOIN users On worker.id_users = users.id where worker.id_users = '${iduser}'   `);
 };
 
 const selectSearchWork = ({ keyword, sort }) => {
@@ -27,6 +27,12 @@ const update = (data) => {
     `UPDATE worker SET name='${name}', jobdesk='${jobdesk}', domisili='${domisili}' ,photo='${photo}' ,status_kerja='${status_kerja}',tempat_kerja='${tempat_kerja}',id_users='${id_users}',deskripsi='${deskripsi}' WHERE id='${id}'`
   );
 };
+
+const updatePhoto = (data) => {
+  const { id, photo } = data;
+  return Pool.query(`UPDATE worker SET photo= '${photo}'  WHERE id='${id}'`);
+};
+
 const deleteData = (id) => {
   return Pool.query(`DELETE FROM worker WHERE id=${id}`);
 };
@@ -54,6 +60,7 @@ module.exports = {
   select,
   insert,
   update,
+  updatePhoto,
   deleteData,
   countData,
   findId,
