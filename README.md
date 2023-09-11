@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <div align="center">
-    <img height="250" src="https://cdn.discordapp.com/attachments/1118733891738554480/1147721385767080047/Screenshot_119-removebg-preview.png" alt="blanja" border="0"/>
+    <img height="100" src="https://cdn.discordapp.com/attachments/1118733891738554480/1147721385767080047/Screenshot_119-removebg-preview.png" alt="blanja" border="0"/>
   </div>
   <h3 align="center">Hiring</h3>
   <p align="center">
